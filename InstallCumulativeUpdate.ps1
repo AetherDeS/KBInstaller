@@ -1,6 +1,5 @@
 ﻿
 # - - - - Начало скрипта - - - - 
-
 # Локальная папка назначения
 $userName = Read-Host "Введите имя пользователя: "
 $destinationPath = "C:\Users\$userName\Downloads"
