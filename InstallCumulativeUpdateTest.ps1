@@ -2,7 +2,8 @@
 # - - - - Начало скрипта - - - - 
 
 # Локальная папка назначения
-$destinationPath = "C:\Users\$env:computername\Downloads"
+$userName = Read-Host "Введите имя пользователя: "
+$destinationPath = "C:\Users\$userName\Downloads"
 $serverPath = "C:\Users\$env:computername\Documents" # путь до самих KB'шек ❗Измеить
 # Имена файлов накопительных  ❗ Изменить
 $Updates = @(
