@@ -5,7 +5,6 @@
 $userName = Read-Host "Введите имя пользователя: "
 $destinationPath = "C:\Users\$userName\Downloads"
 
-# Имена файлов накопительных  ❗ Изменить
 $Updates = @(
     '1.txt',
     '2.txt',
@@ -15,10 +14,10 @@ $Updates = @(
 
 # - - Выводимая информация
 Write-Host "Доступный список накопительных обновлений: "
-Write-Host "1. 1.txt"  # ❗ Поменять на нужные
-Write-Host "2. 2.txt"  # ❗ Поменять на нужные
-Write-Host "3. 3.txt"  # ❗ Поменять на нужные
-Write-Host "4. 4.txt"  # ❗ Поменять на нужные
+Write-Host "1. 1.txt" 
+Write-Host "2. 2.txt"  
+Write-Host "3. 3.txt"  
+Write-Host "4. 4.txt"  
 
 # Обработка пользователя
 $rawInput = Read-Host "Введите номер накопительного обновления:"
