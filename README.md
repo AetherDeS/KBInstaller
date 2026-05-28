@@ -1,4 +1,4 @@
-# 🛠️ Install-CumulativeUpdate.ps1
+# 🛠️ InstallCumulativeUpdate.ps1
 
 > PowerShell-скрипт для интерактивного выбора, копирования с сетевого ресурса и установки накопительных обновлений Windows (`.msu`) через DISM.
 
