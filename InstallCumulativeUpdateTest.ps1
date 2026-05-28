@@ -4,7 +4,7 @@
 # Локальная папка назначения
 $userName = Read-Host "Введите имя пользователя: "
 $destinationPath = "C:\Users\$userName\Downloads"
-$serverPath = "C:\Users\$env:computername\Documents" # путь до самих KB'шек ❗Измеить
+
 # Имена файлов накопительных  ❗ Изменить
 $Updates = @(
     '1.txt',
@@ -14,14 +14,13 @@ $Updates = @(
 ) 
 
 # - - Выводимая информация
-echo "Доступный список накопительных обновлений: "
-echo "1. 1.txt"  # ❗ Поменять на нужные
-echo "2. 2.txt"  # ❗ Поменять на нужные
-echo "3. 3.txt"  # ❗ Поменять на нужные
-echo "4. 4.txt"  # ❗ Поменять на нужные
+Write-Host "Доступный список накопительных обновлений: "
+Write-Host "1. 1.txt"  # ❗ Поменять на нужные
+Write-Host "2. 2.txt"  # ❗ Поменять на нужные
+Write-Host "3. 3.txt"  # ❗ Поменять на нужные
+Write-Host "4. 4.txt"  # ❗ Поменять на нужные
 
 # Обработка пользователя
-
 $rawInput = Read-Host "Введите номер накопительного обновления:"
 $idx = [int]$rawInput -1
 $sourcePath = $Updates[$idx]
@@ -43,9 +42,9 @@ else {
     Write-Host "Файл не найден или сетевой путь недоступен: $sourcePath" -ForegroundColor Yellow
 }
 
-sleep 1
+Start-Sleep 1
 
-echo "Производится установка накопительного обновления"
+Write-Host "Производится установка накопительного обновления"
 DISM /Online /Add-Package /PackagePath:$sourcePath
 
 Write-Host "`n✅ Все операции завершены." -ForegroundColor Green
